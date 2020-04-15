@@ -1,0 +1,24 @@
+Metadata-Version: 1.1
+Name: pyll
+Version: 0.1
+Summary: Provides a variety of convenience routines for pytorch projects
+Home-page: https://git.bioinf.jku.at/hofmarch/pyll
+Author: Markus Hofmarcher, Michael Widrich
+Author-email: hofmarcher@bioinf.jku.at, widrich@bioinf.jku.at
+License: MIT License
+Description-Content-Type: UNKNOWN
+Description: pyll
+        ===============================
+        
+        Provides a variety of convenience routines for pytorch projects
+        
+        Copyright (c) 2016-2017 Markus Hofmarcher and Michael Widrich, Institute
+        of Bioinformatics, Johannes Kepler University Linz, Austria
+Keywords: Library on top of tensorflow for convenient design of deep (recurrent) networks.
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Deep Learning
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6

@@ -1,0 +1,49 @@
+{
+  "specs": "GapNet-PL",
+  "cuda_gpu": "0",
+  "architecture": "architectures.GapNetPL",
+  "optimizer": "MomentumOptimizer",
+  "optimizer_params": {
+    "learning_rate": 1e-2,
+    "momentum": 0.9
+  },
+  "lrs": {
+    "type": "plateau",
+    "patience": 30,
+    "factor": 0.5,
+    "threshold": 0.01,
+    "mode": "max"
+  },
+  "dataset": {
+    "num_classes": 13,
+    "reader": "datasets.ProteinLoc",
+    "train": {
+      "data_directory_path": "../npzs",
+      "label_file": "../labels_train.txt",
+      "transforms": [
+        "torchvision.transforms.ToPILImage('LA')",
+        "torchvision.transforms.RandomCrop((112,112))",
+        "torchvision.transforms.ToTensor()",
+        "pyll.transforms.NormalizeByImage()"
+      ]
+    },
+    "val": {
+      "data_directory_path": "../npzs",
+      "label_file": "../labels_val.txt",
+      "transforms": [
+        "torchvision.transforms.ToPILImage('LA')",
+        "torchvision.transforms.ToTensor()",
+        "pyll.transforms.NormalizeByImage()"
+      ],
+      "patching": true,
+      "patch_size": 112
+    }
+  },
+  "l1": 1e-7,
+  "l2": 1e-5,
+  "dropout": 0.3,
+  "epochs": 500,
+  "batchsize": 16,
+  "max_checkpoints": 100,
+  "working_dir": "../working_dir"
+}
